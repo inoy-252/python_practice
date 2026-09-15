@@ -16,5 +16,13 @@ Personal practice repository and problem-solving journey following the 30 Days o
 
 ---
 
+## 🛠️ Portfolio Projects
+
+| Project | Description | Concepts Used | Code |
+| :--- | :--- | :--- | :--- |
+| **Smart Health & Biomarker Evaluator** | Automated health screener calculating BMI, cardio heart rates, water targets, and boolean flags | Input Casting, Boolean Logic, Formulas, f-Strings | [projects/health_evaluator/app.py](./projects/health_evaluator/app.py) |
+
+---
+
 ## 🎯 Anchor Project
 - **Goal:** Build an end-to-end AI/ML model and prediction pipeline from foundational Python concepts to deployment.
