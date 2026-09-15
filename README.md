@@ -9,7 +9,7 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | Day | Topic | Status | Code |
 | :--- | :--- | :---: | :--- |
 | **Day 01** | Introduction, Operators, Data Types, & Euclidean Distance | ✅ Completed | [day_01/day1.py](./day_01/day1.py) |
-| **Day 02** | Variables & Built-in Functions | ⏳ In Progress | [day_02/](./day_02/) |
+| **Day 02** | Variables & Built-in Functions | ✅ Completed | [day_02/day_02.py](./day_02/day_02.py) |
 | **Day 03** | Operators & Boolean Logic | ⏳ Upcoming | |
 | **Day 04** | Strings & Text Formatting | ⏳ Upcoming | |
 | **Day 05** | Lists & Sequence Operations | ⏳ Upcoming | |
