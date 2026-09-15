@@ -1,0 +1,15 @@
+# num = int(input("Enter a number: "))
+# print("Is the number", num, "an even number?", num % 2 == 0)
+print("Is 'on' in python and dragon?", "on" in "python" and "on" in "dragon")
+sentence = "I hope this course is not full of jargon."
+print("Does the sentence contain 'jargon'?", "jargon" in sentence)
+height = float(input("Enter the height of the triangle: "))
+base = float(input("Enter the base of the triangle: "))
+area_of_triangle = 0.5 * base * height
+print("Area of the triangle is:", area_of_triangle)
+a1 = int(input("Enter the x-coordinate of the first point: "))
+a2 = int(input("Enter the x-coordinate of the second point: "))
+b1 = int(input("Enter the y-coordinate of the first point: "))
+b2 = int(input("Enter the y-coordinate of the second point: "))
+slope = (b2 - b1) / (a2 - a1)
+print("Slope between the given two points  is:", slope)
