@@ -14,7 +14,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 04** | Strings & Text Formatting | ✅ Completed | [day_04/day_04.py](./day_04/day_04.py) |
 | **Day 05** | Lists & Sequence Operations | ✅ Completed | [day_05/day_05.py](./day_05/day_05.py) |
 | **Day 06** | Tuples & Immutability | ✅ Completed | [day_06/day_06.py](./day_06/day_06.py) |
-| **Day 07** | Sets & Uniqueness | ⏳ Upcoming | |
+| **Day 07** | Sets & Uniqueness | ✅ Completed | [day_07/day_07.py](./day_07/day_07.py) |
+| **Day 08** | Dictionaries & Key-Value Mappings | ⏳ Upcoming | |
 
 ---
 
