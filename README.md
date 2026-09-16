@@ -24,6 +24,7 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | Project | Description | Concepts Used | Code |
 | :--- | :--- | :--- | :--- |
 | **Smart Health & Biomarker Evaluator** | Automated health screener calculating BMI, cardio heart rates, water targets, and boolean flags | Input Casting, Boolean Logic, Formulas, f-Strings | [projects/health_evaluator/app.py](./projects/health_evaluator/app.py) |
+| **Smart Librarian (RAG v0.1)** | Knowledge retrieval engine scoring document relevance using tokenization & set math | Sets, Punctuation Cleaning, `.intersection()`, Prompt Templating | [projects/smart_librarian/rag_v1.py](./projects/smart_librarian/rag_v1.py) |
 
 ---
 
