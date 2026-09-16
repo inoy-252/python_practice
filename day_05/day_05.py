@@ -1,0 +1,20 @@
+it_companies = ["Facebook", "Google", "Microsoft", "Amazon", "Apple", "Oracle", "IBM"]
+print(it_companies)
+print(len(it_companies))
+print(it_companies[0])
+print(it_companies[-1])
+middle_index = len(it_companies) // 2
+print("Middle company:", it_companies[middle_index])
+it_companies.append("Twitter")
+it_companies.insert(3, "Nvidia")
+it_companies.sort()
+print(it_companies)
+print("First 3 companies", it_companies[:3])
+print("Last 3 companies", it_companies[-3::])
+ages = [19, 21, 24, 23, 18, 25, 22, 26, 18]
+minimum_age = min(ages)
+maximum_age = max(ages)
+average_age = (sum(ages)) / len(ages)
+print("the ages of students are:", ages)
+print(f"The average age is: {average_age:.0f} ")
+print("The age range varies from", minimum_age, "to", maximum_age)
