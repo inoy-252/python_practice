@@ -17,7 +17,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 07** | Sets & Uniqueness | ✅ Completed | [day_07/day_07.py](./day_07/day_07.py) |
 | **Day 08** | Dictionaries & Key-Value Mappings | ✅ Completed | [day_08/day_08.py](./day_08/day_08.py) |
 | **Day 09** | Conditionals & Decision Control Flow | ✅ Completed | [day_09/day_09.py](./day_09/day_09.py) |
-| **Day 10** | Loops & Iterations | ⏳ Upcoming | |
+| **Day 10** | Loops & Iterations | ✅ Completed | [day_10/day_10.py](./day_10/day_10.py) |
+| **Day 11** | Functions & Reusability | ⏳ Upcoming | |
 
 ---
 
@@ -27,6 +28,7 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | :--- | :--- | :--- | :--- |
 | **Smart Health & Biomarker Evaluator** | Automated health screener calculating BMI, cardio heart rates, water targets, and boolean flags | Input Casting, Boolean Logic, Formulas, f-Strings | [projects/health_evaluator/app.py](./projects/health_evaluator/app.py) |
 | **Smart Librarian (RAG v0.1)** | Knowledge retrieval engine scoring document relevance using tokenization & set math | Sets, Punctuation Cleaning, `.intersection()`, Prompt Templating | [projects/smart_librarian/rag_v1.py](./projects/smart_librarian/rag_v1.py) |
+| **Smart Librarian (RAG v0.2)** | Autonomous knowledge router selecting winning context & enforcing fallback guardrails | Conditionals (`if/elif/else`), Edge-Case Fallbacks, Scoring Engine | [projects/smart_librarian/rag_v2.py](./projects/smart_librarian/rag_v2.py) |
 
 ---
 
