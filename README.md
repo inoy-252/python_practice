@@ -16,7 +16,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 06** | Tuples & Immutability | ✅ Completed | [day_06/day_06.py](./day_06/day_06.py) |
 | **Day 07** | Sets & Uniqueness | ✅ Completed | [day_07/day_07.py](./day_07/day_07.py) |
 | **Day 08** | Dictionaries & Key-Value Mappings | ✅ Completed | [day_08/day_08.py](./day_08/day_08.py) |
-| **Day 09** | Conditionals & Decision Control Flow | ⏳ Upcoming | |
+| **Day 09** | Conditionals & Decision Control Flow | ✅ Completed | [day_09/day_09.py](./day_09/day_09.py) |
+| **Day 10** | Loops & Iterations | ⏳ Upcoming | |
 
 ---
 
