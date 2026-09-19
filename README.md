@@ -18,7 +18,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 08** | Dictionaries & Key-Value Mappings | ✅ Completed | [day_08/day_08.py](./day_08/day_08.py) |
 | **Day 09** | Conditionals & Decision Control Flow | ✅ Completed | [day_09/day_09.py](./day_09/day_09.py) |
 | **Day 10** | Loops & Iterations | ✅ Completed | [day_10/day_10.py](./day_10/day_10.py) |
-| **Day 11** | Functions & Reusability | ⏳ Upcoming | |
+| **Day 11** | Functions & Reusability | ✅ Completed | [day_11/day_11.py](./day_11/day_11.py) |
+| **Day 12** | Modules & Code Organization | ⏳ Upcoming | |
 
 ---
 
