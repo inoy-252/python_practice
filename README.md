@@ -20,7 +20,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 10** | Loops & Iterations | ✅ Completed | [day_10/day_10.py](./day_10/day_10.py) |
 | **Day 11** | Functions & Reusability | ✅ Completed | [day_11/day_11.py](./day_11/day_11.py) |
 | **Day 12** | Modules & Code Organization | ✅ Completed | [day_12/day_12.py](./day_12/day_12.py) |
-| **Day 13** | List Comprehension | ⏳ Upcoming | |
+| **Day 13** | List Comprehension & Lambdas | ✅ Completed | [day_13/day_13.py](./day_13/day_13.py) |
+| **Day 14** | Higher Order Functions | ⏳ Upcoming | |
 
 ---
 
