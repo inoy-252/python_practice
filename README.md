@@ -21,7 +21,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 11** | Functions & Reusability | ✅ Completed | [day_11/day_11.py](./day_11/day_11.py) |
 | **Day 12** | Modules & Code Organization | ✅ Completed | [day_12/day_12.py](./day_12/day_12.py) |
 | **Day 13** | List Comprehension & Lambdas | ✅ Completed | [day_13/day_13.py](./day_13/day_13.py) |
-| **Day 14** | Higher Order Functions | ⏳ Upcoming | |
+| **Day 14** | Higher Order Functions, Closures & Decorators | ✅ Completed | [day_14/day_14.py](./day_14/day_14.py) |
+| **Day 15** | Python Type Errors & Exception Handling | ⏳ Upcoming | |
 
 ---
 
