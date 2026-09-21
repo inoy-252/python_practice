@@ -33,6 +33,7 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Smart Librarian (RAG v0.1)** | Knowledge retrieval engine scoring document relevance using tokenization & set math | Sets, Punctuation Cleaning, `.intersection()`, Prompt Templating | [projects/smart_librarian/rag_v1.py](./projects/smart_librarian/rag_v1.py) |
 | **Smart Librarian (RAG v0.2)** | Autonomous knowledge router selecting winning context & enforcing fallback guardrails | Conditionals (`if/elif/else`), Edge-Case Fallbacks, Scoring Engine | [projects/smart_librarian/rag_v2.py](./projects/smart_librarian/rag_v2.py) |
 | **Smart Librarian (RAG v0.3)** | Modular NLP pipeline with stop-word filtering and continuous interactive chat retrieval | Functions (`def`), Set Difference, Document Dictionaries, `while` Loops | [projects/smart_librarian/rag_v3.py](./projects/smart_librarian/rag_v3.py) |
+| **AI FinTech Loan Eligibility Predictor** | Rule-based credit underwriting risk scoring engine with DTI ratios and regulatory guardrails | Dictionaries, Modular Functions, Financial Formulas, Risk Ladders | [projects/loan_predictor/app.py](./projects/loan_predictor/app.py) |
 
 ---
 
