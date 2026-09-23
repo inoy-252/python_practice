@@ -27,7 +27,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 17** | Packing & Unpacking (*args, **kwargs, zip, enumerate) | ✅ Completed | [day_17/day_17.py](./day_17/day_17.py) |
 | **Day 18** | Regular Expressions (RegEx) & Pattern Matching | ✅ Completed | [day_18/day_18.py](./day_18/day_18.py) |
 | **Day 19** | File Handling (open, read, write, json, csv) | ✅ Completed | [day_19/day_19.py](./day_19/day_19.py) |
-| **Day 20** | Python PIP, Package Management, & Web Requests | ⏳ Upcoming | |
+| **Day 20** | Python PIP, Package Management, & Web Requests | ✅ Completed | [day_20/day_20.py](./day_20/day_20.py) |
+| **Day 21** | Classes & Objects (Object-Oriented Programming) | ⏳ Upcoming | |
 
 ---
 
