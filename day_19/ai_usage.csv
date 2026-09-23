@@ -1,0 +1,4 @@
+user_id,prompt_tokens,completion_tokens,latency_ms
+usr_101,120,45,310
+usr_102,540,180,850
+usr_103,85,30,220

@@ -1,0 +1,13 @@
+{
+    "model_name": "Llama-3-FineTuned",
+    "learning_rate": 0.0005,
+    "epochs": 20,
+    "batch_size": 32,
+    "layers": [
+        "Input",
+        "Dense_128",
+        "Dense_64",
+        "Output"
+    ],
+    "is_active": true
+}

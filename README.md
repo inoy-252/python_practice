@@ -24,8 +24,10 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 14** | Higher Order Functions, Closures & Decorators | ✅ Completed | [day_14/day_14.py](./day_14/day_14.py) |
 | **Day 15** | Python Error Types & Exception Handling | ✅ Completed | [day_15/day_15.py](./day_15/day_15.py) |
 | **Day 16** | Python Datetime Module & Date Math | ✅ Completed | [day_16/day_16.py](./day_16/day_16.py) |
+| **Day 17** | Packing & Unpacking (*args, **kwargs, zip, enumerate) | ✅ Completed | [day_17/day_17.py](./day_17/day_17.py) |
 | **Day 18** | Regular Expressions (RegEx) & Pattern Matching | ✅ Completed | [day_18/day_18.py](./day_18/day_18.py) |
-| **Day 19** | File Handling (open, read, write, json, csv) | ⏳ Upcoming | |
+| **Day 19** | File Handling (open, read, write, json, csv) | ✅ Completed | [day_19/day_19.py](./day_19/day_19.py) |
+| **Day 20** | Python PIP, Package Management, & Web Requests | ⏳ Upcoming | |
 
 ---
 
