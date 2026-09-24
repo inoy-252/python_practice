@@ -28,7 +28,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 18** | Regular Expressions (RegEx) & Pattern Matching | ✅ Completed | [day_18/day_18.py](./day_18/day_18.py) |
 | **Day 19** | File Handling (open, read, write, json, csv) | ✅ Completed | [day_19/day_19.py](./day_19/day_19.py) |
 | **Day 20** | Python PIP, Package Management, & Web Requests | ✅ Completed | [day_20.py](./day_20/day_20.py) • [exercises.py](./day_20/day_20_exercises.py) |
-| **Day 21** | Classes & Objects (Object-Oriented Programming) | ⏳ Upcoming | |
+| **Day 21** | Classes & Objects (Object-Oriented Programming) | ✅ Completed | [day_21/day_21.py](./day_21/day_21.py) |
+| **Day 22** | Web Scraping (BeautifulSoup & HTML Parsing) | ⏳ Upcoming | |
 
 ---
 
