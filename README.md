@@ -29,7 +29,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 19** | File Handling (open, read, write, json, csv) | ✅ Completed | [day_19/day_19.py](./day_19/day_19.py) |
 | **Day 20** | Python PIP, Package Management, & Web Requests | ✅ Completed | [day_20.py](./day_20/day_20.py) • [exercises.py](./day_20/day_20_exercises.py) |
 | **Day 21** | Classes & Objects (Object-Oriented Programming) | ✅ Completed | [day_21/day_21.py](./day_21/day_21.py) |
-| **Day 22** | Web Scraping (BeautifulSoup & HTML Parsing) | ⏳ Upcoming | |
+| **Day 22** | Web Scraping (BeautifulSoup & HTML Parsing) | ✅ Completed | [day_22/day_22.py](./day_22/day_22.py) |
+| **Day 23** | Virtual Environments (venv & Dependency Isolation) | ⏳ Upcoming | |
 
 ---
 
