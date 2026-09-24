@@ -74,9 +74,7 @@ def export_market_intelligence(products, metrics, keywords):
         print(" Execution logged to logs/pipeline.log")
 
 
-# ==========================================
-# PIPELINE EXECUTION ENGINE
-# ==========================================
+
 if __name__ == "__main__":
     print("\n" + "=" * 60)
     print("MARKET INTELLIGENCE & DATA INGESTION PIPELINE")
@@ -84,21 +82,20 @@ if __name__ == "__main__":
 
     URL = "https://dummyjson.com/products"
 
-    # Stage 1: Ingestion
+    
     print("\n[STAGE 1/4] Ingesting remote records...")
     products = fetch_market_data(URL)
 
     if products is not None:
         print(f"[STATUS] Ingestion successful. Total records: {len(products)}")
 
-        # Stage 2: NLP Keyword Analysis
+    
         print("\n[STAGE 2/4] Running NLP keyword extraction...")
         keywords = extract_market_keywords(products)
         print("--- Top Trending Keywords ---")
         for word, count in keywords:
             print(f"  {word:<15} : {count} occurrences")
 
-        # Stage 3: Financial Analytics
         print("\n[STAGE 3/4] Computing market financial metrics...")
         metrics = analyze_market_metrics(products)
         print("--- Executive Metrics Summary ---")
@@ -108,7 +105,6 @@ if __name__ == "__main__":
         print(f"  Average Price      : ${metrics['avg_price']}")
         print(f"  Flagship Product   : {metrics['flagship_product']}")
 
-        # Stage 4: File Persistence & Audit Logging
         print("\n[STAGE 4/4] Persisting data structures and audit logging...")
         export_market_intelligence(products, metrics, keywords)
 
