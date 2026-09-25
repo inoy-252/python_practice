@@ -30,7 +30,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 20** | Python PIP, Package Management, & Web Requests | ✅ Completed | [day_20.py](./day_20/day_20.py) • [exercises.py](./day_20/day_20_exercises.py) |
 | **Day 21** | Classes & Objects (Object-Oriented Programming) | ✅ Completed | [day_21/day_21.py](./day_21/day_21.py) |
 | **Day 22** | Web Scraping (BeautifulSoup & HTML Parsing) | ✅ Completed | [day_22/day_22.py](./day_22/day_22.py) |
-| **Day 23** | Virtual Environments (venv & Dependency Isolation) | ⏳ Upcoming | |
+| **Day 23** | Virtual Environments (venv & Dependency Isolation) | ✅ Completed | [day_23/day_23.py](./day_23/day_23.py) |
+| **Day 24** | Statistics & NumPy (Numerical Computing for AI/ML) | ⏳ Upcoming | |
 
 ---
 
