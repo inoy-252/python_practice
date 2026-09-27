@@ -33,7 +33,8 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 23** | Virtual Environments (venv & Dependency Isolation) | ✅ Completed | [day_23/day_23.py](./day_23/day_23.py) |
 | **Day 24** | Statistics & NumPy (Numerical Computing for AI/ML) | ✅ Completed | [day_24/day_24.py](./day_24/day_24.py) |
 | **Day 25** | Pandas (Data Analysis & Manipulation) | ✅ Completed | [day_25/day_25.py](./day_25/day_25.py) |
-| **Day 26** | Python Web APIs (Endpoints & Microservices) | ⏳ Upcoming | |
+| **Day 26** | Python Web APIs (Endpoints & Microservices) | ✅ Completed | [day_26/day_26.py](./day_26/day_26.py) |
+| **Day 27** | Python Databases (SQLite & Data Persistence) | ⏳ Upcoming | |
 
 ---
 
