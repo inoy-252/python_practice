@@ -8,6 +8,7 @@ from engine import predict_health_risk
 from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
+init_db()
 
 
 @app.route("/", methods=["GET"])

@@ -3,9 +3,11 @@ day_30/database.py - Persistence Layer for Health Predictions.
 Handles all SQLite connections, table initialization, and queries.
 """
 
+from pathlib import Path
 import sqlite3
 
-DB_FILE = "day_30/health_predictions.db"
+BASE_DIR = Path(__file__).resolve().parent
+DB_FILE = str(BASE_DIR / "health_predictions.db")
 
 
 def get_db_connection():
