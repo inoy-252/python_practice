@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health & Biomarker Risk Advisor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #374151;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 18px;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        .result-box {
+            border-left: 5px solid #2563eb;
+            background-color: #eff6ff;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .badge-optimal { background-color: #d1fae5; color: #065f46; }
+        .badge-moderate { background-color: #fef3c7; color: #92400e; }
+        .badge-high { background-color: #fee2e2; color: #991b1b; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>AI Health & Biomarker Risk Advisor</h1>
+        <p>End-to-End Predictive Health Risk Application powered by Python, Flask, and SQLite</p>
+    </div>
+
+    <!-- 1. Input Form -->
+    <div class="card">
+        <h2>Enter Patient Biomarkers</h2>
+        <form action="/predict" method="POST">
+            <div class="form-grid">
+                <div>
+                    <label for="name">Patient Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Yasir" required>
+                </div>
+                <div>
+                    <label for="age">Age (years)</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 24" required>
+                </div>
+                <div>
+                    <label for="bmi">Body Mass Index (BMI)</label>
+                    <input type="number" step="0.1" id="bmi" name="bmi" placeholder="e.g. 22.5" required>
+                </div>
+                <div>
+                    <label for="heart_rate">Resting Heart Rate (BPM)</label>
+                    <input type="number" id="heart_rate" name="heart_rate" min="30" max="220" placeholder="e.g. 68" required>
+                </div>
+            </div>
+            <button type="submit">Run AI Evaluation</button>
+        </form>
+    </div>
+
+    <!-- 2. AI Prediction Result (Displays only when a prediction exists) -->
+    {% if result %}
+    <div class="card">
+        <h2>Latest AI Prediction for {{ result.name }}</h2>
+        <div class="result-box">
+            <p><strong>Predicted Risk Category:</strong> 
+                <span class="badge {{ result.badge_class }}">{{ result.risk_level }}</span>
+            </p>
+            <p><strong>Composite Risk Score:</strong> {{ result.risk_score }} / 100</p>
+            <p><strong>AI Confidence:</strong> {{ result.confidence }}%</p>
+            <p><strong>Recommendation:</strong> {{ result.recommendation }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- 3. Historical Database Records -->
+    <div class="card">
+        <h2>Recent Evaluation History (SQLite)</h2>
+        {% if history and history|length > 0 %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>BMI</th>
+                    <th>Heart Rate</th>
+                    <th>Risk Category</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in history %}
+                <tr>
+                    <td>#{{ row.id }}</td>
+                    <td>{{ row.patient_name }}</td>
+                    <td>{{ row.age }}</td>
+                    <td>{{ row.bmi }}</td>
+                    <td>{{ row.heart_rate }} bpm</td>
+                    <td><strong>{{ row.risk_level }}</strong></td>
+                    <td>{{ row.risk_score }}/100</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="color: #6b7280;">No evaluations recorded in SQLite yet. Submit the form above to add the first record!</p>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

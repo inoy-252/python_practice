@@ -37,7 +37,7 @@ Personal practice repository and problem-solving journey following the 30 Days o
 | **Day 27** | Python Databases (SQLite & Data Persistence) | ✅ Completed | [day_27/day_27.py](./day_27/day_27.py) |
 | **Day 28** | API Development & Full Integration | ✅ Completed | [day_28.py](./day_28/day_28.py) • [README.md](./day_28/README.md) |
 | **Day 29** | Building an End-to-End AI Web Application | ✅ Completed | [day_29.py](./day_29/day_29.py) • [README.md](./day_29/README.md) |
-| **Day 30** | Final Capstone Deployment & Packaging | ⏳ Upcoming | |
+| **Day 30** | Final Capstone Deployment & Packaging | ✅ Completed | [app.py](./day_30/app.py) • [README.md](./day_30/README.md) |
 
 ---
 
