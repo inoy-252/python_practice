@@ -8,6 +8,8 @@ __pycache__/
 .venv/
 env/
 venv/
+.env
+.vscode/
 
 # Databases & local storage
 *.db
