@@ -4,7 +4,8 @@ from collections import Counter
 
 
 def tokenize(text):
-    return re.findall(r"[a-zA-Z0-9_\-\/]+", text.lower())
+    tokens = re.findall(r"[a-zA-Z0-9_\-\/]+", text.lower())
+    return tokens
 
 
 class BM25:
@@ -16,13 +17,14 @@ class BM25:
 
         self.doc_tokens = []
         self.doc_lens = []
-
         for doc in documents:
-            tokens = tokenize(doc["content"] + " " + doc["title"])
+            doc_cont_titl = doc["content"] + " " + doc["title"]
+            tokens = tokenize(doc_cont_titl)
+
             self.doc_tokens.append(tokens)
             self.doc_lens.append(len(tokens))
 
-        self.avg_doc_len = sum(self.doc_lens) / max(self.corpus_size, 1)
+        self.avg_doc_length = sum(self.doc_lens) / (self.corpus_size)
 
         self.doc_term_freqs = [Counter(tokens) for tokens in self.doc_tokens]
 
@@ -31,7 +33,6 @@ class BM25:
             unique_terms = set(tokens)
             for term in unique_terms:
                 self.doc_freqs[term] += 1
-
         self.idf = {}
         for term, freq in self.doc_freqs.items():
             self.idf[term] = math.log(
@@ -39,53 +40,43 @@ class BM25:
             )
 
     def score_document(self, query_tokens, doc_index):
-        """
-        Calculates the BM25 score for a single document against query tokens.
-        """
         score = 0.0
         doc_len = self.doc_lens[doc_index]
         term_freqs = self.doc_term_freqs[doc_index]
-
         for token in query_tokens:
             if token not in term_freqs:
                 continue
-
             tf = term_freqs[token]
             idf = self.idf.get(token, 0.0)
 
-            # Saturated frequency normalized by document length
             numerator = tf * (self.k1 + 1.0)
             denominator = tf + self.k1 * (
-                1.0 - self.b + self.b * (doc_len / self.avg_doc_len)
+                1.0 - self.b + self.b * (doc_len / self.avg_doc_length)
             )
-
             score += idf * (numerator / denominator)
-
         return score
 
     def search(self, query, top_k=None):
-        """
-        Ranks all documents in the corpus for the given query.
-        Returns a list of dicts with doc, score, and rank.
-        """
-        query_tokens = tokenize(query)
-        if not query_tokens:
-            return []
-
-        scored_docs = []
+        query_words = tokenize(query)
+        results = []
         for i, doc in enumerate(self.documents):
-            score = self.score_document(query_tokens, i)
-            scored_docs.append({"doc": doc, "score": score})
+            score = self.score_document(query_words, i)
+            results.append((doc, score))
 
-        # Sort descending by BM25 score
-        scored_docs.sort(key=lambda x: x["score"], reverse=True)
-
+        results.sort(key=lambda item: item[1], reverse=True)
         if top_k is not None:
-            scored_docs = scored_docs[:top_k]
+            return results[:top_k]
+        return results
 
-        # Attach 1-based rank (1st place, 2nd place, etc.)
-        for rank, item in enumerate(scored_docs, 1):
-            item["rank"] = rank
 
-        return scored_docs
+if __name__ == "__main__":
+    from data import DOCUMENTS
 
+    engine = BM25(DOCUMENTS)
+
+    test_query = "ERR-PAY-502-GATEWAY"
+    results = engine.search(test_query, top_k=3)
+
+    print(f"Query: '{test_query}'\n")
+    for doc, score in results:
+        print(f"Score: {score:.4f} | ID: {doc['id']} | Title: {doc['title']}")
