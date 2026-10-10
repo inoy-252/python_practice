@@ -1,8 +1,34 @@
 from bm25 import BM25
 from data import DOCUMENTS
 from dense_retriever import DenseRetriever
+from dotenv import load_dotenv
 from fusion import reciprocal_rank_fusion
+from google import genai
 from reranker import Reranker
+
+load_dotenv()
+client = genai.Client()
+
+
+def generate_answer(query, document):
+    prompt = f"""You are a helpful engineering assistant. 
+Answer the engineer's question using ONLY the information in the document below.
+If the document does not contain the answer, say "This document does not cover that."
+
+Engineer's Question: {query}
+
+Document Title: {document["title"]}
+Document Content:
+{document["content"]}
+
+Provide a clear, direct, actionable answer."""
+
+    response = client.models.generate_content(
+        model="gemini-3.5-flash-lite",
+        contents=prompt,
+    )
+    return response.text.strip() if response.text else "No answer generated."
+
 
 print("Initializing Hybrid Search RAG Pipeline...")
 print("Loading BM25 index...")
@@ -42,3 +68,7 @@ while True:
         print(f"\nRank #{rank} | Relevance: {score:.1f}/10.0")
         print(f"ID   : {doc['id']}")
         print(f"Title: {doc['title']}")
+
+    best_doc = final_results[0][0]
+    print("\n=== GENERATED ANSWER ===")
+    print(generate_answer(query, best_doc))
