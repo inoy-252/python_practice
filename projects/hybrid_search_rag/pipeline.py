@@ -1,9 +1,11 @@
+from dotenv import load_dotenv
+from google import genai
+
 from bm25 import BM25
 from data import DOCUMENTS
 from dense_retriever import DenseRetriever
-from dotenv import load_dotenv
 from fusion import reciprocal_rank_fusion
-from google import genai
+from query_intelligence import QueryIntelligence
 from reranker import Reranker
 
 load_dotenv()
@@ -37,6 +39,9 @@ bm25 = BM25(DOCUMENTS)
 print("Generating document embeddings (this may take a few seconds)...")
 dense = DenseRetriever(DOCUMENTS)
 
+print("Loading Query Intelligence engine...")
+qi = QueryIntelligence()
+
 print("Loading reranker...")
 reranker = Reranker()
 
@@ -51,11 +56,15 @@ while True:
     if query.lower() == "quit":
         print("Exiting pipeline.")
         break
-    print(f"\nSearching for: '{query}'")
-    print("-" * 55)
 
-    bm25_results = bm25.search(query, top_k=5)
-    dense_results = dense.search(query, top_k=5)
+    print("Generating query intelligence (Rewriting & HyDE)...")
+    rewritten_query = qi.rewrite_query(query)
+    hyde_doc = qi.generate_hypothetical_document(query)
+    print(f"  [BM25 Query] : {rewritten_query}")
+    print(f"  [HyDE Doc]   : {hyde_doc[:80]}...")
+
+    bm25_results = bm25.search(rewritten_query, top_k=5)
+    dense_results = dense.search(hyde_doc, top_k=5)
 
     fused = reciprocal_rank_fusion(bm25_results, dense_results)
     top_candidates = [doc for doc, _ in fused[:3]]
